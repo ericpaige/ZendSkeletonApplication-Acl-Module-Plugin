@@ -9,10 +9,11 @@ for things like database connections, etc.
 
 Note: The Album module requires a databases connection. Add a file in this directory called "local.php" with this contents:
 
-<?php
+```php
 return array(
     'db' => array(
         'username' => 'db_username',
         'password' => 'db_password',
     ),
 );
+```
