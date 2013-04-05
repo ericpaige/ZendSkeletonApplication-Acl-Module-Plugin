@@ -44,3 +44,4 @@ class AlbumForm extends Form
         ));
     }
 }
+

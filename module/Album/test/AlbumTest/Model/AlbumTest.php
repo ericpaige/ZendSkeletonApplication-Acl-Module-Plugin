@@ -1,3 +1,4 @@
+<?php
 namespace AlbumTest\Model;
 
 use Album\Model\Album;
