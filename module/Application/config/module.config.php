@@ -16,6 +16,7 @@ return array(
                     'route'    => '/',
                     'defaults' => array(
                         'controller' => 'Application\Controller\Index',
+                        //'controller' => 'Album\Controller\Album', // <-- change here
                         'action'     => 'index',
                     ),
                 ),
@@ -50,6 +51,24 @@ return array(
                     ),
                 ),
             ),
+            
+			
+			
+	        'profile' => array(
+	            'type' => 'literal',
+	            'options' => array(
+	                'route' => '/profile',
+	                'defaults' => array(
+	                    '__NAMESPACE__' => 'Application\Controller',
+	                    'controller'    => 'Profile',
+	                    'action'        => 'index',
+	                ),
+	            ),
+	        ),			
+				
+			
+			
+			
         ),
     ),
     'service_manager' => array(
@@ -69,7 +88,8 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'Application\Controller\Index' => 'Application\Controller\IndexController'
+            'Application\Controller\Index' => 'Application\Controller\IndexController',
+			'Application\Controller\Profile' => 'Application\Controller\ProfileController'
         ),
     ),
     'view_manager' => array(
