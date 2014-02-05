@@ -62,7 +62,8 @@ class MyAclPlugin extends AbstractPlugin
 		
         $actionName = strtolower($routeMatch->getParam('action', 'not-found'));	// get the action name	
         $controllerName = $routeMatch->getParam('controller', 'not-found');	// get the controller name	
-		$controllerName = strtolower(array_pop(explode('\\', $controllerName)));
+	$controllerName = explode('\\', $controllerName);
+        $controllerName = strtolower(array_pop($controllerName));
         
 /*
 		print '<br>$moduleName: '.$moduleName.'<br>'; 
